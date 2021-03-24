@@ -1,4 +1,27 @@
+import { colors } from '@material-ui/core';
+
 export const buttonsParams = ['large', 'medium', 'small'];
+
+export const inputsParams = [
+  {
+    name: 'Default',
+    label: 'Full Name',
+    placeholder: 'Placeholder',
+    color: colors.amber,
+  },
+  {
+    name: 'Default',
+    label: 'Full Name',
+    placeholder: 'Placeholder',
+    color: colors.primary,
+  },
+  {
+    name: 'Default',
+    label: 'Full Name',
+    placeholder: 'Placeholder',
+    color: colors.primary,
+  },
+];
 
 export const typographyParams = [
   'h1',
