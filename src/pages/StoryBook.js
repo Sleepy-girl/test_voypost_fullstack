@@ -21,7 +21,7 @@ function StoryBook() {
               {buttonsParams.map(button => (
                 <ButtonComponent
                   variant="contained"
-                  size={button.size}
+                  size={button}
                   color="primary"
                 >
                   Sign up
@@ -32,7 +32,7 @@ function StoryBook() {
               {buttonsParams.map(button => (
                 <ButtonComponent
                   variant="contained"
-                  size={button.size}
+                  size={button}
                   color="secondary"
                 >
                   Sign up
@@ -41,7 +41,7 @@ function StoryBook() {
             </Box>
             <Box display="flex" justifyContent="space-between">
               {buttonsParams.map(button => (
-                <ButtonComponent variant="contained" size={button.size}>
+                <ButtonComponent variant="contained" size={button}>
                   Sign up
                 </ButtonComponent>
               ))}

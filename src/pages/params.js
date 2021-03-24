@@ -1,14 +1,4 @@
-export const buttonsParams = [
-  {
-    size: 'large',
-  },
-  {
-    size: 'medium',
-  },
-  {
-    size: 'small',
-  },
-];
+export const buttonsParams = ['large', 'medium', 'small'];
 
 export const typographyParams = [
   'h1',

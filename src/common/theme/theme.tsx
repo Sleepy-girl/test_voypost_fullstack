@@ -22,10 +22,6 @@ const theme = createMuiTheme({
         width: 270,
         height: 50,
       },
-      // sizeMedium: {
-      //   width: 133,
-      //   height: 50
-      // },
       sizeSmall: {
         width: 120,
         height: 40
