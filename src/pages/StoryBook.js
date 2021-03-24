@@ -2,20 +2,22 @@ import Box from '../components/materialsComponents/Box';
 import TypographyComponent from '../components/materialsComponents/Typography';
 import ButtonComponent from '../components/materialsComponents/Button';
 import { typographyParams, buttonsParams } from './params';
+import { Grid } from '@material-ui/core';
 
 function StoryBook() {
   return (
     <Box pt={2} px={2.5} display="flex">
-      <Box mr={7.75}>
-        <Box mb={5.25}>
+      <Box>
+        <Box mr={7.75} mb={5.25}>
           <TypographyComponent variant="body1" display="inline-block">
             Buttons
           </TypographyComponent>
           <Box
             // display="flex"
+            // flexWrap="wrap"
+            // direction="column"
             // justifyContent="space-between"
-            // alignItems=""
-            flexWrap="wrap"
+            width={583}
             minHeight={214}
           >
             <Box
@@ -54,6 +56,7 @@ function StoryBook() {
               display="flex"
               justifyContent="space-between"
               alignItems="baseline"
+              mb={4}
             >
               {buttonsParams.map(button => (
                 <ButtonComponent variant="contained" size={button}>
