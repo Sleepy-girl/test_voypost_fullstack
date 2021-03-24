@@ -12,12 +12,18 @@ function StoryBook() {
             Buttons
           </TypographyComponent>
           <Box
-            display="flex"
-            justifyContent="space-between"
+            // display="flex"
+            // justifyContent="space-between"
+            // alignItems=""
             flexWrap="wrap"
             minHeight={214}
           >
-            <Box display="flex" justifyContent="space-between">
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              alignItems="baseline"
+              mb={4}
+            >
               {buttonsParams.map(button => (
                 <ButtonComponent
                   variant="contained"
@@ -28,7 +34,12 @@ function StoryBook() {
                 </ButtonComponent>
               ))}
             </Box>
-            <Box display="flex" justifyContent="space-between">
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              alignItems="baseline"
+              mb={4}
+            >
               {buttonsParams.map(button => (
                 <ButtonComponent
                   variant="contained"
@@ -39,7 +50,11 @@ function StoryBook() {
                 </ButtonComponent>
               ))}
             </Box>
-            <Box display="flex" justifyContent="space-between">
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              alignItems="baseline"
+            >
               {buttonsParams.map(button => (
                 <ButtonComponent variant="contained" size={button}>
                   Sign up
