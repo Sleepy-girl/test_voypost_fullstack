@@ -7,19 +7,19 @@ export const inputsParams = [
     name: 'Default',
     label: 'Full Name',
     placeholder: 'Placeholder',
-    color: colors.amber,
+    color: colors.grey,
   },
   {
-    name: 'Default',
-    label: 'Full Name',
+    name: 'Active',
+    label: 'Email Adrress',
     placeholder: 'Placeholder',
-    color: colors.primary,
+    color: colors.green,
   },
   {
-    name: 'Default',
-    label: 'Full Name',
+    name: 'Error',
+    label: 'Password (8 characters)',
     placeholder: 'Placeholder',
-    color: colors.primary,
+    color: colors.red,
   },
 ];
 

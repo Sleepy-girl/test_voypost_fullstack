@@ -1,16 +1,16 @@
 import Box from '../components/materialsComponents/Box';
-import TypographyComponent from '../components/materialsComponents/Typography';
 import ButtonComponent from '../components/materialsComponents/Button';
+import TextFieldComponents from '../components/materialsComponents/Input';
+import TypographyComponent from '../components/materialsComponents/Typography';
 import { typographyParams, buttonsParams } from './params';
+import { v4 as uuidv4 } from 'uuid';
 
 function StoryBook() {
   return (
     <Box pt={2} px={2.5} display="flex">
       <Box>
         <Box mr={7.75} mb={5.25}>
-          <Box mb={2}>
-            <TypographyComponent variant="body1">Buttons</TypographyComponent>
-          </Box>
+          <TypographyComponent variant="body1">Buttons</TypographyComponent>
           <Box width={583} minHeight={214}>
             <Box
               display="flex"
@@ -20,7 +20,9 @@ function StoryBook() {
             >
               {buttonsParams.map(button => (
                 <ButtonComponent
+                  key={uuidv4()}
                   variant="contained"
+                  type="button"
                   size={button}
                   color="primary"
                 >
@@ -36,7 +38,9 @@ function StoryBook() {
             >
               {buttonsParams.map(button => (
                 <ButtonComponent
+                  key={uuidv4()}
                   variant="contained"
+                  type="button"
                   size={button}
                   color="secondary"
                 >
@@ -51,7 +55,12 @@ function StoryBook() {
               mb={4}
             >
               {buttonsParams.map(button => (
-                <ButtonComponent variant="contained" size={button}>
+                <ButtonComponent
+                  key={uuidv4()}
+                  variant="contained"
+                  type="button"
+                  size={button}
+                >
                   Sign up
                 </ButtonComponent>
               ))}
@@ -60,27 +69,29 @@ function StoryBook() {
         </Box>
 
         <Box>
-          <Box mb={2}>
-            <TypographyComponent variant="body1">
-              Text fields
-            </TypographyComponent>
-          </Box>
-          <Box mb={0.75}>
-            <TypographyComponent variant="body1">Default</TypographyComponent>
-          </Box>
+          <TypographyComponent variant="body1">Text fields</TypographyComponent>
+          <TypographyComponent variant="body2">Default</TypographyComponent>
+          <TextFieldComponents
+            type="text"
+            // color="primary"
+            multiline
+            borderColor="secondary"
+            placeholder="Placeholder"
+            helperText="helperText"
+          />
         </Box>
       </Box>
 
       <Box>
-        <Box mb={2}>
-          <TypographyComponent variant="body1">Typography</TypographyComponent>
-        </Box>
+        <TypographyComponent variant="body1">Typography</TypographyComponent>
         {typographyParams.map(param => (
-          <Box mb={3}>
-            <TypographyComponent display="block" key={param} variant={param}>
-              Typography
-            </TypographyComponent>
-          </Box>
+          <TypographyComponent
+            key={uuidv4()}
+            variant={param}
+            color="textPrimary"
+          >
+            Typography
+          </TypographyComponent>
         ))}
       </Box>
     </Box>

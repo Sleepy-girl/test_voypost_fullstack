@@ -6,9 +6,10 @@ const colors = {
   secondary: '#4285F4',
   error: '#FF0000',
   black: '#000000',
+  grey: '#EFEFEF',
 }
 
-// const defaultTheme = createMuiTheme();
+const defaultTheme = createMuiTheme();
 
 const theme = createMuiTheme({
   shadows: Array(25).fill("none") as Shadows,
@@ -18,7 +19,7 @@ const theme = createMuiTheme({
       main: colors.primary
     },
     secondary: {
-      main:  colors.secondary
+      main: colors.secondary
     },
   },
   
@@ -29,6 +30,7 @@ const theme = createMuiTheme({
         height: "50px",
         fontWeight: 900,
         fontSize: "16px",
+        borderRadius: "6px",
       },
       sizeLarge: {
         width: 270,
@@ -43,20 +45,46 @@ const theme = createMuiTheme({
       }
     },
     
-    
+    MuiTextField: {
+      root: {
+        width: "550px",
+        margin: 0,
+        borderRadius: "6px",
+        background: colors.grey,
+        lineHeight: "50px",
+
+        '& .MuiOutlinedInput-root': {  // - The Input-root, inside the TextField-root
+          '& fieldset': {            // - The <fieldset> inside the Input-root
+              borderColor: colors.grey,   // - Set the Input border
+          },
+          // '&:hover fieldset': {
+          //     borderColor: 'yellow', // - Set the Input border when parent has :hover
+          // },
+          '&.Mui-focused fieldset': { // - Set the Input border when parent is focused 
+              borderColor: colors.grey,
+          },
+        },
+
+      // '& fieldset.MuiOutlinedInput-notchedOutline': {
+      //   borderColor: colors.grey,
+      }, 
+     
+      
+    },
 
     MuiTypography: {
       root: {
-        color: colors.black,
         width: "550px",
-        display: "block",
+        textPrimary:{
+          main: colors.black
+        },  
+        marginBottom: defaultTheme.spacing(3)
       },
 
       h1: {
         fontSize: '36px',
         fontWeight: 900,
         lineHeight: "42px",
-        // colorPrimary: colors.black,
       },
       h2: {
         fontSize: '32px',
@@ -96,16 +124,22 @@ const theme = createMuiTheme({
       body1: {
         fontSize: '16px',
         lineHeight: "19px",
+        marginBottom: defaultTheme.spacing(2),
+      },
+      body2: {
+        fontSize: '16px',
+        lineHeight: "19px",
+        marginBottom: defaultTheme.spacing(0.75),
       }
     },
-    MuiSelect:{
-      root:{
-        // paddingRight: defaultTheme.spacing(3),
-      },
-      icon:{
-        color: colors.primary,
-      },
-    },
+    // MuiSelect:{
+    //   root:{
+    //     // paddingRight: defaultTheme.spacing(3),
+    //   },
+    //   icon:{
+    //     color: colors.primary,
+    //   },
+    // },
   },
 })
 export default theme;
