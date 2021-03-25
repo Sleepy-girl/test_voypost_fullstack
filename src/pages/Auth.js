@@ -3,7 +3,9 @@ import Box from '../components/materialsComponents/Box';
 import ButtonComponent from '../components/materialsComponents/Button';
 import TypographyComponent from '../components/materialsComponents/Typography';
 import { v4 as uuidv4 } from 'uuid';
-import { authButParams } from './params';
+import { authButParams, authInputParams } from './params';
+import TextFieldComponents from '../components/materialsComponents/Input';
+import LabelComponent from '../components/materialsComponents/Label';
 
 function Auth() {
   return (
@@ -32,6 +34,29 @@ function Auth() {
           </ButtonComponent>
         ))}
       </Box>
+      {authInputParams.map(input => (
+        <Box key={uuidv4()} mb={3.75}>
+          <LabelComponent variant="standard" labelColor={input.color}>
+            {input.label}
+          </LabelComponent>
+          <TextFieldComponents
+            variant={'outlined'}
+            inputClassName="active"
+            type={input.type}
+            placeholder={input.placeholder}
+            helperText={input.helperText}
+            color={input.color}
+          />
+        </Box>
+      ))}
+      <ButtonComponent
+        variant="contained"
+        size="large"
+        type="submit"
+        color="primary"
+      >
+        Sing Up
+      </ButtonComponent>
     </Box>
   );
 }

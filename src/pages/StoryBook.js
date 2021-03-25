@@ -80,7 +80,6 @@ function StoryBook() {
               </LabelComponent>
               <TextFieldComponents
                 variant={'outlined'}
-                inputClassName="active"
                 type={input.type}
                 placeholder={input.placeholder}
                 helperText={input.helperText}

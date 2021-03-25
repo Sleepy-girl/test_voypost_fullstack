@@ -23,7 +23,6 @@ export const authButParams = [
 
 export const inputParams = [
   {
-    className: 'default',
     name: 'Default',
     label: 'Full Name',
     type: 'text',
@@ -32,7 +31,6 @@ export const inputParams = [
     color: '#000000',
   },
   {
-    className: 'active',
     name: 'Active',
     type: 'email',
     label: 'Email Adrress',
@@ -41,7 +39,6 @@ export const inputParams = [
     color: '#6D9B12',
   },
   {
-    className: 'error',
     name: 'Error',
     type: 'password',
     label: 'Password (8 characters)',
@@ -49,6 +46,34 @@ export const inputParams = [
     helperText:
       'Please input your password! The password must be at least 8 characters!',
     color: '#FF0000',
+  },
+];
+
+export const authInputParams = [
+  {
+    name: 'Default',
+    label: 'Full Name',
+    type: 'text',
+    placeholder: 'Placeholder',
+    helperText: '',
+    color: '#000000',
+  },
+  {
+    name: 'Active',
+    type: 'email',
+    label: 'Email Adrress',
+    placeholder: 'Placeholder',
+    helperText: '',
+    color: '#000000',
+  },
+  {
+    name: 'Error',
+    type: 'password',
+    label: 'Password (8 characters)',
+    placeholder: 'Placeholder',
+    helperText:
+      'Please input your password! The password must be at least 8 characters!',
+    color: '#000000',
   },
 ];
 
