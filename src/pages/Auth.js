@@ -2,11 +2,11 @@ import { useState } from 'react';
 import Box from '../components/materialsComponents/Box';
 import TypographyComponent from '../components/materialsComponents/Typography';
 import ButtonComponent from '../components/materialsComponents/Button';
-import { v4 as uuidv4 } from 'uuid';
-import { authButParams, authInputParams } from './utils/params';
-import TextFieldComponents from '../components/materialsComponents/Input';
 import LabelComponent from '../components/materialsComponents/Label';
+import TextFieldComponents from '../components/materialsComponents/Input';
+import { v4 as uuidv4 } from 'uuid';
 import { Formik, Form } from 'formik';
+import { authButParams, authInputParams } from './utils/params';
 import { validationSchema } from './utils/validationSchema';
 import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
 import VisibilityOffOutlinedIcon from '@material-ui/icons/VisibilityOffOutlined';
@@ -54,16 +54,8 @@ function Auth() {
           console.log(values);
         }}
       >
-        {({
-          values,
-          errors,
-          isValid,
-          touched,
-          handleChange,
-          handleBlur,
-          handleSubmit,
-        }) => (
-          <Form onSubmit={handleSubmit}>
+        {({ values, errors, touched, handleChange, handleBlur }) => (
+          <Form>
             {authInputParams.map(input => (
               <Box key={uuidv4()} mb={3.75} style={{ position: 'relative' }}>
                 <LabelComponent variant="standard" labelColor={input.color}>
@@ -76,15 +68,20 @@ function Auth() {
                     type={
                       input.type === 'password' && isShow ? 'text' : input.type
                     }
+                    id={input.name}
                     name={input.name}
-                    value={values.fullname}
+                    value={values[input.value]}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     placeholder={input.placeholder}
                     helperText={
-                      touched.fullname && errors.fullname && errors.fullname
+                      touched[input.value] &&
+                      errors[input.value] &&
+                      errors[input.value]
                     }
-                    error={touched.fullname && errors.fullname ? true : false}
+                    error={
+                      touched[input.value] && errors[input.value] ? true : false
+                    }
                     // style={{
                     //   borderColor:
                     // touched.fullname && errors.fullname
@@ -117,7 +114,6 @@ function Auth() {
               type="submit"
               size="large"
               color="primary"
-              // disabled={!isValid}
             >
               Sing Up
             </ButtonComponent>

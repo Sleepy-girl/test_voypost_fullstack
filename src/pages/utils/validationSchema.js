@@ -11,5 +11,5 @@ export const validationSchema = Yup.object().shape({
       8,
       'Please input your password! The password must be at least 8 characters!',
     )
-    .required('Required!'),
+    .required('Required field'),
 });
