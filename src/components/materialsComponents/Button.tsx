@@ -1,5 +1,5 @@
-import { Button } from "@material-ui/core";
 import { FC } from "react";
+import { Button } from "@material-ui/core";
 
 interface ButtonProps {
   variant?: "contained" | "outlined";

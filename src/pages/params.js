@@ -1,25 +1,33 @@
-import { colors } from '@material-ui/core';
+export const buttonParams = ['large', 'medium', 'small'];
 
-export const buttonsParams = ['large', 'medium', 'small'];
-
-export const inputsParams = [
+export const inputParams = [
   {
+    className: 'default',
     name: 'Default',
     label: 'Full Name',
+    type: 'text',
     placeholder: 'Placeholder',
-    color: colors.grey,
+    helperText: '',
+    color: '#000000',
   },
   {
+    className: 'active',
     name: 'Active',
+    type: 'email',
     label: 'Email Adrress',
     placeholder: 'Placeholder',
-    color: colors.green,
+    helperText: '',
+    color: '#6D9B12',
   },
   {
+    className: 'error',
     name: 'Error',
+    type: 'password',
     label: 'Password (8 characters)',
     placeholder: 'Placeholder',
-    color: colors.red,
+    helperText:
+      'Please input your password! The password must be at least 8 characters!',
+    color: '#FF0000',
   },
 ];
 

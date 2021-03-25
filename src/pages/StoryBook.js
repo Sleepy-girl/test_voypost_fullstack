@@ -2,8 +2,9 @@ import Box from '../components/materialsComponents/Box';
 import ButtonComponent from '../components/materialsComponents/Button';
 import TextFieldComponents from '../components/materialsComponents/Input';
 import TypographyComponent from '../components/materialsComponents/Typography';
-import { typographyParams, buttonsParams } from './params';
+import { buttonParams, inputParams, typographyParams } from './params';
 import { v4 as uuidv4 } from 'uuid';
+import LabelComponent from '../components/materialsComponents/Label';
 
 function StoryBook() {
   return (
@@ -18,7 +19,7 @@ function StoryBook() {
               alignItems="baseline"
               mb={4}
             >
-              {buttonsParams.map(button => (
+              {buttonParams.map(button => (
                 <ButtonComponent
                   key={uuidv4()}
                   variant="contained"
@@ -36,7 +37,7 @@ function StoryBook() {
               alignItems="baseline"
               mb={4}
             >
-              {buttonsParams.map(button => (
+              {buttonParams.map(button => (
                 <ButtonComponent
                   key={uuidv4()}
                   variant="contained"
@@ -54,7 +55,7 @@ function StoryBook() {
               alignItems="baseline"
               mb={4}
             >
-              {buttonsParams.map(button => (
+              {buttonParams.map(button => (
                 <ButtonComponent
                   key={uuidv4()}
                   variant="contained"
@@ -67,18 +68,26 @@ function StoryBook() {
             </Box>
           </Box>
         </Box>
-
         <Box>
           <TypographyComponent variant="body1">Text fields</TypographyComponent>
-          <TypographyComponent variant="body2">Default</TypographyComponent>
-          <TextFieldComponents
-            type="text"
-            // color="primary"
-            multiline
-            borderColor="secondary"
-            placeholder="Placeholder"
-            helperText="helperText"
-          />
+          {inputParams.map(input => (
+            <Box key={uuidv4()} mb={2.5}>
+              <TypographyComponent variant="body2">
+                {input.name}
+              </TypographyComponent>
+              <LabelComponent variant="standard" labelColor={input.color}>
+                {input.label}
+              </LabelComponent>
+              <TextFieldComponents
+                variant={'outlined'}
+                inputClassName="active"
+                type={input.type}
+                placeholder={input.placeholder}
+                helperText={input.helperText}
+                color={input.color}
+              />
+            </Box>
+          ))}
         </Box>
       </Box>
 

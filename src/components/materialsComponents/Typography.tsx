@@ -1,5 +1,5 @@
-import { Typography } from "@material-ui/core";
 import { FC } from "react";
+import { Typography } from "@material-ui/core";
 
 interface TypographyProp {
   display?: "initial" | "block" | "inline";
