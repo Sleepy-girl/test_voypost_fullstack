@@ -7,6 +7,7 @@ const colors = {
   error: '#FF0000',
   black: '#000000',
   grey: '#EFEFEF',
+  button: '#E5E5E5',
 }
 
 const defaultTheme = createMuiTheme();
@@ -75,9 +76,17 @@ const theme = createMuiTheme({
               border: `solid 1px ${colors.primary}`,
           },
           // '& fieldset.MuiOutlinedInput-notchedOutline': {
-          //     borderColor: colors.primary,
-          //   },
+            //     borderColor: colors.primary,
+            //   },
+            // },
+          // '&$focused': {
+          //   backgroundColor: '#fff',
+          //   border: 'solid 1px #6D9B12',
           // },
+          '&$:invalid': {
+            backgroundColor: '#fff',
+            border: `solid 1px ${colors.primary}`,
+          },
         },
       }, 
     },

@@ -1,4 +1,25 @@
+import googleIcon from '../assets/images/auth/google.svg';
+import microsoftIcon from '../assets/images/auth/microsoft.svg';
+
 export const buttonParams = ['large', 'medium', 'small'];
+export const authButParams = [
+  {
+    size: 'large',
+    type: 'button',
+    name: 'google',
+    color: 'secondary',
+    img: { src: googleIcon, alt: 'googleIcon' },
+    content: 'Sign up with Google',
+  },
+  {
+    size: 'large',
+    type: 'button',
+    name: 'microsoft',
+    // color: '',
+    img: { src: microsoftIcon, alt: 'microsoftIcon' },
+    content: 'Sign up with Microsoft',
+  },
+];
 
 export const inputParams = [
   {
