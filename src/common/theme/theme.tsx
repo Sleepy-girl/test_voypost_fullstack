@@ -79,14 +79,6 @@ const theme = createMuiTheme({
             //     borderColor: colors.primary,
             //   },
             // },
-          // '&$focused': {
-          //   backgroundColor: '#fff',
-          //   border: 'solid 1px #6D9B12',
-          // },
-          '&$:invalid': {
-            backgroundColor: '#fff',
-            border: `solid 1px ${colors.primary}`,
-          },
         },
       }, 
     },

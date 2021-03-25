@@ -1,5 +1,5 @@
-import googleIcon from '../assets/images/auth/google.svg';
-import microsoftIcon from '../assets/images/auth/microsoft.svg';
+import googleIcon from '../../assets/images/auth/google.svg';
+import microsoftIcon from '../../assets/images/auth/microsoft.svg';
 
 export const buttonParams = ['large', 'medium', 'small'];
 export const authButParams = [
@@ -51,29 +51,25 @@ export const inputParams = [
 
 export const authInputParams = [
   {
-    name: 'Default',
-    label: 'Full Name',
+    name: 'fullname',
+    value: 'fullname',
     type: 'text',
+    label: 'Full Name',
     placeholder: 'Placeholder',
-    helperText: '',
-    color: '#000000',
   },
   {
-    name: 'Active',
+    name: 'email',
+    value: 'email',
     type: 'email',
     label: 'Email Adrress',
     placeholder: 'Placeholder',
-    helperText: '',
-    color: '#000000',
   },
   {
-    name: 'Error',
+    name: 'password',
+    value: 'password',
     type: 'password',
     label: 'Password (8 characters)',
     placeholder: 'Placeholder',
-    helperText:
-      'Please input your password! The password must be at least 8 characters!',
-    color: '#000000',
   },
 ];
 
