@@ -10,10 +10,6 @@ interface TextFieldProp {
   placeholder: string;
   type?: string;
   label?: string;
-  // value?: string;
-  // name?: string;
-  // onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  // onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
 }
 
 const TextFieldComponents: FC<TextFieldProp> = (props) => {

@@ -64,27 +64,21 @@ const theme = createMuiTheme({
         borderRadius: "6px",
         background: colors.grey,
         lineHeight: "50px",
-        '& .MuiOutlinedInput-root': {  // - The Input-root, inside the TextField-root
-          '& fieldset': {            // - The <fieldset> inside the Input-root
+        '& .MuiOutlinedInput-root': { 
+          '& fieldset': { 
               borderColor: colors.grey,  
           },
-          // '&:hover fieldset': {
-          //     borderColor: colors.grey, 
-          // },
-          '&.Mui-focused fieldset': { 
-              borderColor: colors.primary,
+          '&:hover fieldset': {
+              borderColor: colors.primary, 
           },
-
+          '&.Mui-focused fieldset': { 
+              border: `solid 1px ${colors.primary}`,
+          },
           // '& fieldset.MuiOutlinedInput-notchedOutline': {
           //     borderColor: colors.primary,
           //   },
           // },
         },
-        // '& .MuiOutlinedInput-root': {
-        //   '& fieldset': {
-        //     borderColor: colors.primary,
-        //   },
-        // },
       }, 
     },
 
