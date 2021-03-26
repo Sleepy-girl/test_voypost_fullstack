@@ -43,31 +43,30 @@ function Auth() {
         ))}
       </Box>
       <Formik
-        onSubmit={values => {
-          console.log(values);
-        }}
-        validationSchema={validationSchema}
         initialValues={{
           fullname: '',
           email: '',
           password: '',
         }}
+        validationSchema={validationSchema}
+        onSubmit={values => {
+          console.log(values);
+        }}
       >
         {({ values, errors, touched, handleChange, handleBlur }) => (
           <Form>
             {authInputParams.map(input => (
-              <Box key={uuidv4()} mb={3.75} style={{ position: 'relative' }}>
+              <Box key={input.label} mb={3.75} style={{ position: 'relative' }}>
                 <LabelComponent variant="standard" labelColor={input.color}>
                   {input.label}
                 </LabelComponent>
                 <>
                   <TextFieldComponents
-                    key={uuidv4()}
+                    key={input.name}
                     variant="outlined"
                     type={
                       input.type === 'password' && isShow ? 'text' : input.type
                     }
-                    id={input.name}
                     name={input.name}
                     value={values[input.value]}
                     onChange={handleChange}
