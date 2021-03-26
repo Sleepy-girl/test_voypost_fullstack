@@ -43,15 +43,14 @@ function Auth() {
         ))}
       </Box>
       <Formik
+        onSubmit={values => {
+          console.log(values);
+        }}
+        validationSchema={validationSchema}
         initialValues={{
           fullname: '',
           email: '',
           password: '',
-        }}
-        validationSchema={validationSchema}
-        validateOnBlur
-        onSubmit={values => {
-          console.log(values);
         }}
       >
         {({ values, errors, touched, handleChange, handleBlur }) => (
@@ -82,13 +81,6 @@ function Auth() {
                     error={
                       touched[input.value] && errors[input.value] ? true : false
                     }
-                    // style={{
-                    //   borderColor:
-                    // touched.fullname && errors.fullname
-                    // ? '#FF0000'
-                    // :
-                    //     '#6D9B12',
-                    // }}
                   />
                   {input.name === 'password' && (
                     <Box

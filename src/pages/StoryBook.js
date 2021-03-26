@@ -1,10 +1,10 @@
 import Box from '../components/materialsComponents/Box';
-import ButtonComponent from '../components/materialsComponents/Button';
-import TextFieldComponents from '../components/materialsComponents/Input';
 import TypographyComponent from '../components/materialsComponents/Typography';
+import ButtonComponent from '../components/materialsComponents/Button';
+import LabelComponent from '../components/materialsComponents/Label';
+import TextFieldComponents from '../components/materialsComponents/Input';
 import { buttonParams, inputParams, typographyParams } from './utils/params';
 import { v4 as uuidv4 } from 'uuid';
-import LabelComponent from '../components/materialsComponents/Label';
 
 function StoryBook() {
   return (
